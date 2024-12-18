@@ -329,8 +329,11 @@ void loop()
 ======
 
 # Function calling via terminal
-- **Function calling**: The process of calling a defined function (or method) to perform a particular task in programming
-- How to use Function calling
+- **Function calling**
+: The process of calling a defined function (or method) to perform a particular task in programming
+External functions are available when using LLM
+
+# How to use Function calling
 - ## 1. Define a function
   input: fruit name, output : fruit's price
 ```
@@ -426,7 +429,7 @@ input: area, putput: Current weather, temperature, humidity
 ## 함수 정의
 
 def get_current_weather(city):
-    key = '1200913362259bf0f6f6aca9a206894a'
+    key = '--'
     api = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid={key}"
     location = requests.get(api)
     location = json.loads(location.text)
